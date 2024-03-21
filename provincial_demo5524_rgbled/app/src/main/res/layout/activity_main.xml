@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--用纵向LinearLayout，布局整齐-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--图片的缩放类型scaleType用的centerInside，缩放居中-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:scaleType="centerInside"
+        android:src="@drawable/led" />
+    <!--每个seekbar用横向的LinearLayout，放textview和seekbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红（R)"
+            android:textColor="#ff0000" />
+        <!--最小值默认0，最大值设置为255，拉到最左0，最右255-->
+        <!--thumb是拖动按钮样式-->
+        <!--progressDrawable是拖动条样式-->
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progressDrawable="@drawable/redbar"
+            android:thumb="@drawable/seekbar" />
+    </LinearLayout>
+    <!--同上-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绿（G）"
+            android:textColor="#00ff00" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progressDrawable="@drawable/greenbar"
+            android:thumb="@drawable/seekbar" />
+    </LinearLayout>
+    <!--同上-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝（B）"
+            android:textColor="#0000ff" />
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progressDrawable="@drawable/bluebar"
+            android:thumb="@drawable/seekbar" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--显示通道的textview-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+        <!--switch开关-->
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:text="开关：" />
+    </LinearLayout>
+</LinearLayout>

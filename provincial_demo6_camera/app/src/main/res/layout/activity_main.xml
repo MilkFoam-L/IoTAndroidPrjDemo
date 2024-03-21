@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/camera"
+        android:layout_width="400dp"
+        android:layout_height="225dp"
+        android:background="@drawable/camerabg" />
+
+    <ImageButton
+        android:id="@+id/zuo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/zuo"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/shang"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/shang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/xia"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/xia"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/you"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="235dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/you"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/auto_led"
+        android:layout_width="382dp"
+        android:layout_height="247dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginBottom="24dp"
+            android:text="关灯时间设置" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="92dp"
+            android:text="开灯时间设置" />
+
+        <EditText
+            android:id="@+id/tv_close_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="39dp"
+            android:layout_marginBottom="13dp"
+            android:ems="10"
+            android:inputType="time"
+            android:text="6:00" />
+
+        <EditText
+            android:id="@+id/tv_open_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="79dp"
+            android:ems="10"
+            android:inputType="time"
+            android:text="18:00" />
+
+        <ImageButton
+            android:id="@+id/ibtn_setting"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="126dp"
+            android:layout_marginBottom="136dp"
+            android:background="@drawable/btn_setting"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_led"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="380dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/led_close"
+        />
+
+    <TextView
+        android:id="@+id/tv_led"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="328dp"
+        android:text="关灯"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_cam"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="364dp"
+        android:layout_marginBottom="96dp"
+        android:text="监控开关"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_led"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="120dp"
+        android:text="LED开关"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
